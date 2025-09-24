@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🎬 Movie App</h1>
+    <input type="text" id="search" placeholder="Search movies...">
+    <select id="filter">
+      <option value="all">All Genres</option>
+      <option value="Sci-Fi">Sci-Fi</option>
+      <option value="Action">Action</option>
+      <option value="Adventure">Adventure</option>
+    </select>
+  </header>
+
+  <main id="movie-list"></main>
+
+  <!-- Trailer Modal -->
+  <div id="trailerModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <iframe id="trailerFrame" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Booking Confirmation -->
+  <div id="confirmation" class="hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
