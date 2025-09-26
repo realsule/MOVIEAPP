@@ -1,35 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Movie App</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Movie Box — SPA </title>
+  <meta name="description" content="Single-page movie app: browse titles, watch trailer previews, select seats & book tickets.">
   <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-  <header>
-    <h1>🎬 Movie App</h1>
-    <input type="text" id="search" placeholder="Search movies...">
-    <select id="filter">
-      <option value="all">All Genres</option>
-      <option value="Sci-Fi">Sci-Fi</option>
-      <option value="Action">Action</option>
-      <option value="Adventure">Adventure</option>
-    </select>
-  </header>
+  <div class="app" id="app">
+    <header class="app-header">
+      <div class="logo-container">
+         <img src="https://img.freepik.com/premium-vector/movie-box-logo-template-design_316488-1548.jpg" alt="Movie App Logo"; class="logo">
+        <div class="title-text">
+          <h1>Movie Box </h1>
+          <div class="sub">Browse • Preview Trailers • Reserve Seats</div>
+        </div>
+      </div>
+    </header>
 
-  <main id="movie-list"></main>
+    <!-- MAIN GRID -->
+    <main>
+      <div class="controls">
+        <div class="search">
+          <input id="search" type="search" placeholder="Search movies by title..." aria-label="Search movies">
+        </div>
+        <select id="genreFilter" aria-label="Filter by genre">
+          <option value="all">All genres</option>
+        </select>
+        <button class="btn" id="btn-refresh" title="Reload data">Refresh</button>
+      </div>
 
-  <!-- Trailer Modal -->
-  <div id="trailerModal" class="modal">
-    <div class="modal-content">
-      <span id="closeModal">&times;</span>
-      <iframe id="trailerFrame" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+      <section class="grid" id="grid" aria-live="polite"></section>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Bookings and notes">
+      <div>
+        <div class="section-title">Your Bookings</div>
+        <div class="book-list" id="bookList">
+          <div class="empty">No bookings yet — select a movie and reserve seats.</div>
+        </div>
+      </div>
+
+      <hr style="margin:12px 0;border:0;border-top:1px solid rgba(255,255,255,0.03)">
+
+  
+    </aside>
+  </div>
+
+  <!-- Modal for details + seats -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="dialog" role="document">
+      <div class="head">
+        <div>
+          <strong id="modalTitle">Movie Title</strong>
+          <div id="modalMeta" style="font-size:13px;color:var(--muted);margin-top:6px"></div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <button class="link" id="closeModal">Close</button>
+        </div>
+      </div>
+
+      <div class="content">
+        <div>
+          <div id="trailerWrap">
+            <!-- Trailer inserted here as iframe -->
+            <iframe class="trailer" id="trailerFrame" title="Trailer preview" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <div style="margin-top:12px">
+            <div style="font-weight:600;margin-bottom:6px">Description</div>
+            <div id="modalSummary" style="color:var(--muted);font-size:13px;line-height:1.3"></div>
+          </div>
+        </div>
+
+        <aside>
+          <div style="font-weight:600">Select Seats</div>
+          <div id="seatsGrid" class="seats-grid" style="margin-top:10px"></div>
+          <div class="legend">
+            <div class="key"><div style="width:18px;height:18px;border-radius:4px;background:#08202a;border:1px solid rgba(255,255,255,0.02)"></div><div style="color:var(--muted)">Available</div></div>
+            <div class="key"><div style="width:18px;height:18px;border-radius:4px;background:linear-gradient(90deg,#06b6d4,#60a5fa)"></div><div style="color:var(--muted)">Selected</div></div>
+            <div class="key"><div style="width:18px;height:18px;border-radius:4px;background:#99a1a8"></div><div style="color:var(--muted)">Occupied</div></div>
+          </div>
+
+          <div class="footer-actions">
+            <div style="color:var(--muted);font-size:13px">Seats: <span id="selectedCount">0</span></div>
+            <button class="btn" id="confirmBooking">Book</button>
+          </div>
+        </aside>
+      </div>
     </div>
   </div>
 
-  <!-- Booking Confirmation -->
-  <div id="confirmation" class="hidden"></div>
-
-  <script src="app.js"></script>
+  <script src="app.js">
+  
+  </script>
 </body>
 </html>
