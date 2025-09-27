@@ -8,7 +8,7 @@
    ---------------------------- */
 
 // ----- Config & State -----
-const API = 'http://localhost:3000/shows';
+const BASE_URL = "https://movie-api-1-ihlq.onrender.com";
 const MAX_SHOWS = 12;
 const appState = {
   shows: [],
