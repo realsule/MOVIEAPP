@@ -22,3 +22,6 @@ A lightweight **movie booking SPA** built with **vanilla JavaScript** and powere
 ## 🔌 API Endpoints  
 Base URL:  https://movie-api-1-ihlq.onrender.com/shows
 
+## Site link
+
+link : https://movieb0xx.netlify.app/
