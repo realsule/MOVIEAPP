@@ -9,23 +9,14 @@ The app fetches movie data from a public API, displays trailers, and allows user
 - 🎥 Browse movies from API (TVMaze / TMDB).  
 - ▶️ Watch trailers in a modal popup.  
 - 💺 Interactive seat selection for booking.  
-- 📱 Fully responsive design for mobile & desktop.  
-- 🔄 API integration with `fetch()` (async/await).  
-- 💾 Local storage persistence (optional).  
+- 📱 Fully responsive design for mobile & desktop.    
+- 💾 Local storage persistence .  
 
 ---
 
 ## 🛠️ Tech Stack  
 - **Frontend:** HTML, CSS, JavaScript  
-- **API:** [TVMaze API](https://www.tvmaze.com/api) *(can be swapped with TMDB)*  
 - **Deployment:** Netlify
 
 ---
 
-## 📂 Project Structure  
-```bash
-├── index.html        # Main HTML file
-├── style.css         # Styling
-├── script.js         # JavaScript logic
-├── db.json           # (Optional) Local mock data if using json-server
-└── README.md         # Project documentation
