@@ -188,18 +188,18 @@ function renderSeatsForShow(showId) {
 
 // ---------- Trailer Map ----------
 const trailerMap = {
-  "Under the Dome": "https://www.youtube.com/embed/example1",
-  "Person of Interest": "https://www.youtube.com/embed/example2",
-  Bitten: "https://www.youtube.com/embed/example3",
-  Arrow: "https://www.youtube.com/embed/example4",
-  "True Detective": "https://www.youtube.com/embed/example5",
-  "The 100": "https://www.youtube.com/embed/example6",
-  Homeland: "https://www.youtube.com/embed/example7",
-  Glee: "https://www.youtube.com/embed/example8",
-  Revenge: "https://www.youtube.com/embed/example9",
-  Grimm: "https://www.youtube.com/embed/example10",
-  Gotham: "https://www.youtube.com/embed/example11",
-  "Lost Girl": "https://www.youtube.com/embed/example12",
+  "Under the Dome": "https://www.youtube.com/embed/f_Y5YeYrqUk",
+  "Person of Interest": "https://www.youtube.com/embed/WYDWSNMTauQ",
+  Bitten: "https://www.youtube.com/embed/8bK5rwmzqFA",
+  Arrow: "https://www.youtube.com/embed/hTv13EjlLNg",
+  "True Detective": "https://www.youtube.com/embed/fVQUcaO4AvE",
+  "The 100": "https://www.youtube.com/embed/aDrsItJ_HU4",
+  Homeland: "https://www.youtube.com/embed/-JcezAq67Rk",
+  Glee: "https://www.youtube.com/embed/cIvQ8zMmt2M",
+  Revenge: "https://www.youtube.com/embed/FZtM-z2QAaA",
+  Grimm: "https://www.youtube.com/embed/BXqfS9JcB20",
+  Gotham: "https://www.youtube.com/embed/0d1zpt6k5OI",
+  "Lost Girl": "https://www.youtube.com/embed/sw3BnnQFobk",
 };
 
 // ---------- Modal ----------
